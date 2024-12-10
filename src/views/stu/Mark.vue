@@ -20,7 +20,6 @@
         </template>
       </el-table-column>
     </el-table>
-    <p style="text-align: end; color: blue;">使用方法去格式化日期</p>
   </div>
 </template>
 
