@@ -42,10 +42,10 @@ const save = () => {
   console.log(mks);
   $postj("/api/fore/tea/addMark", mks)
     .then((resp) => {
-      store.commit("show", "批量提交成绩成功 ...");
+      store.commit("show", "提交成绩成功");
     })
     .catch((error) => {
-      console.error("Error saving marks:", error);
+      console.error("等分错误:", error);
     });
 };
 
@@ -59,7 +59,7 @@ onMounted(() => {
       markInfos.value = resp.data.data;
     })
     .catch((error) => {
-      console.error("Error fetching marks:", error);
+      console.error("登分错误:", error);
     });
 });
 </script>

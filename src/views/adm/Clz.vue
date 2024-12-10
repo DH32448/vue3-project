@@ -51,10 +51,10 @@ const del = (clzno) => {
   $get("/api/adm/clz/remove/" + clzno)
     .then((resp) => {
       clzs.value = resp.data.data;
-      ElMessage.success('删除成功');
+      ElMessage.success('成功删除');
     })
     .catch((error) => {
-      ElMessage.error('删除失败: ' + error.message);
+      ElMessage.error('删除失败:  ' + error.message);
     });
 };
 
@@ -73,7 +73,7 @@ const doUpdate = () => {
       clzs.value = resp.data.data;
     })
     .catch((error) => {
-      ElMessage.error('更新失败: ' + error.message);
+      ElMessage.error('更新失败:  ' + error.message);
     });
 };
 

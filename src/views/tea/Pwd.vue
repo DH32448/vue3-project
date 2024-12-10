@@ -33,7 +33,7 @@ const form = ref({
 
 const update = () => {
   if (form.value.newPwd1 !== form.value.newPwd2) {
-    store.commit("show", "新密码输入2次不一致");
+    store.commit("show", "两次新密码不一致");
     return;
   }
   let objPwd = { oldPwd: form.value.oldPwd, newPwd: form.value.newPwd1 };

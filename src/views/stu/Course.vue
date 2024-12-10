@@ -26,7 +26,7 @@ const fetchCourses = () => {
       tasks.value = resp.data.data;
     })
     .catch((error) => {
-      console.error("Error fetching courses:", error);
+      console.error("课程错误:", error);
     });
 };
 

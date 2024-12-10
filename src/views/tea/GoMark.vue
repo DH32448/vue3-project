@@ -45,7 +45,7 @@ onMounted(() => {
       tasks.value = resp.data.data;
     })
     .catch((error) => {
-      console.error("Error fetching tasks:", error);
+      console.error("等分管理错误:", error);
     });
 });
 </script>

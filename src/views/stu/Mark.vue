@@ -29,10 +29,10 @@ import { $get } from '@/ajax/index.js';
 import { ElTable, ElTableColumn } from 'element-plus';
 
 const marks = ref([]);
-
+//日期
 const formatDate = (value, args) => {
   var dt = new Date(value);
-  if (args === 'yyyy-M-d') { // yyyy-M-d
+  if (args === 'yyyy-M-d') {
     let year = dt.getFullYear();
     let month = dt.getMonth() + 1;
     let date = dt.getDate();

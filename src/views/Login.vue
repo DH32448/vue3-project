@@ -61,12 +61,12 @@ const login = () => {
 
       window.localStorage.setItem("roleName", store.state.roleName);
     }).catch((error) => {
-      console.error("获取用户信息失败:", error);
-      err.value = "获取用户信息失败，请重试";
+      console.error("获取用户失败:", error);
+      err.value = "获取用户失败";
     });
   }).catch((error) => {
     console.error("登录失败:", error);
-    err.value = "登录失败，请检查用户名和密码";
+    err.value = "登录失败，账号或密码错误";
   });
 };
 </script>

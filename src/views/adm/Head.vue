@@ -53,10 +53,10 @@ const beforeUpload = (file) => {
   const isLt2M = file.size / 1024 / 1024 < 2;
 
   if (!isJPGorPNG) {
-    ElMessage.error('上传头像图片只能是 JPG 或 PNG 格式!');
+    ElMessage.error('上传头像图片只能是 jpg 或 png 格式!');
   }
   if (!isLt2M) {
-    ElMessage.error('上传头像图片大小不能超过 2MB!');
+    ElMessage.error('头像大小不能超过2MB!');
   }
   return isJPGorPNG && isLt2M;
 };

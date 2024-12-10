@@ -98,7 +98,7 @@ const move = (n) => {
 
 const totalPage = computed(() => {
     let n = page.value.total / page.value.lines;
-    console.log("未取整页数=" + n);
+    console.log("整页数=" + n);
     n = Math.floor(n);
     let y = page.value.total % page.value.lines;
     console.log("页数=" + n + "    余数=" + y);

@@ -27,7 +27,7 @@
         <span slot="title">我的分数</span>
       </el-menu-item>
     </el-menu>
-    <div style="width: 78%; height: 100%; padding: 20px;">
+    <div style="width: 80%; height: 100%; padding: 20px;">
       <router-view></router-view>
     </div>
   </div>

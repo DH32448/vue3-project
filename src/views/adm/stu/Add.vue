@@ -21,7 +21,7 @@
       </el-form-item>
       <el-form-item label="图片">
         <el-upload
-          action="/api/adm/stu/upload" <!-- 这里假设有一个上传接口 -->
+          action="/api/adm/stu/upload"
           :on-change="handleChange"
           :auto-upload="false"
           ref="upload"

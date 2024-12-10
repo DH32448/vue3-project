@@ -95,7 +95,7 @@ onMounted(() => {
       courses.value = resp.data.data;
     })
     .catch((error) => {
-      ElMessage.error('加载课程失败: ' + error.message);
+      ElMessage.error('课程失败: ' + error.message);
     });
 });
 </script>
