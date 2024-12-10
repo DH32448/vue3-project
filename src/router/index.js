@@ -1,57 +1,35 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const Login = () => import('../views/Login.vue');
-const Adm = () => import('../views/adm/Adm.vue');
-const Stu = () => import('../views/stu/Main.vue');
-const Tea = () => import('../views/tea/Main.vue');
-
-const Adm_Clz = () => import('../views/adm/Clz.vue');
-const Adm_Course = () => import('../views/adm/Course.vue');
-const Adm_Task = () => import('../views/adm/Task.vue');
-const Adm_Head = () => import('../views/adm/Head.vue');
-const Adm_Tea_Show = () => import('../views/adm/tea/Show.vue');
-const Adm_Tea_Add = () => import('../views/adm/tea/Add.vue');
-const Adm_Stu_Show = () => import('../views/adm/stu/Show.vue');
-const Adm_Stu_Add = () => import('../views/adm/stu/Add.vue');
-
-const Tea_Mark_Go = () => import('../views/tea/GoMark.vue');
-const Tea_Mark_Do = () => import('../views/tea/DoMark.vue');
-const Tea_Head = () => import('../views/tea/Head.vue');
-const Tea_Pwd = () => import('../views/tea/Pwd.vue');
-
-const Stu_Mark = () => import('../views/stu/Mark.vue');
-const Stu_Course = () => import('../views/stu/Course.vue');
-
 const router = createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/login', component: Login },
-        { path: '/adm', component: Adm,
+        { path: '/login', component: () => import('../views/Login.vue') },
+        { path: '/adm', component: () => import('../views/adm/Adm.vue'),
             children: [
-                { path: 'clz', component: Adm_Clz },
-                { path: 'course', component: Adm_Course },
-                { path: 'tea', component: Adm_Tea_Show },
-                { path: 'addtea', component: Adm_Tea_Add },
-                { path: 'stu', component: Adm_Stu_Show },
-                { path: 'addstu', component: Adm_Stu_Add },
-                { path: 'task', component: Adm_Task },
-                { path: 'head', component: Adm_Head }
+                { path: 'clz', component: () => import('../views/adm/Clz.vue') },
+                { path: 'course', component: () => import('../views/adm/Course.vue') },
+                { path: 'tea', component: () => import('../views/adm/tea/Show.vue') },
+                { path: 'addtea', component: () => import('../views/adm/tea/Add.vue') },
+                { path: 'stu', component: () => import('../views/adm/stu/Show.vue') },
+                { path: 'addstu', component: () => import('../views/adm/stu/Add.vue') },
+                { path: 'task', component: () => import('../views/adm/Task.vue') },
+                { path: 'head', component: () => import('../views/adm/Head.vue') }
             ],
         },
-        { path: '/stu', component: Stu,
+        { path: '/stu', component: () => import('../views/stu/Main.vue'),
             children: [
-                { path: 'head', component: Tea_Head },
-                { path: 'pwd', component: Tea_Pwd },
-                { path: 'course', component: Stu_Course },
-                { path: 'mark', component: Stu_Mark }
+                { path: 'head', component: () => import('../views/tea/Head.vue') },
+                { path: 'pwd', component: () => import('../views/tea/Pwd.vue') },
+                { path: 'course', component: () => import('../views/stu/Course.vue') },
+                { path: 'mark', component: () => import('../views/stu/Mark.vue') }
             ]
         },
-        { path: '/tea', component: Tea,
+        { path: '/tea', component: () => import('../views/tea/Main.vue'),
             children: [
-                { path: 'mark', component: Tea_Mark_Go },
-                { path: 'domark', component: Tea_Mark_Do },
-                { path: 'head', component: Tea_Head },
-                { path: 'pwd', component: Tea_Pwd }
+                { path: 'mark', component: () => import('../views/tea/GoMark.vue') },
+                { path: 'domark', component: () => import('../views/tea/DoMark.vue') },
+                { path: 'head', component: () => import('../views/tea/Head.vue') },
+                { path: 'pwd', component: () => import('../views/tea/Pwd.vue') }
             ]
         },
         { path: "/", redirect: "/login" }
